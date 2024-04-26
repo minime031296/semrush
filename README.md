@@ -5,7 +5,7 @@ Welcome to my project! This is a Cloning of site name SEMRUSH made in HTML , CSS
 
 <h1>How to run project</h1>
 1: Clone it with the help of git bash. 
-2: After clloning you can use the open live server to run the project .
+2: After cloning you can use the open live server to run the project .
 3: You are free to use my project
 
 <h1>Collaboration</h1>
