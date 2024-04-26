@@ -5,621 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        #box {
-            height: 5000px;
-            width: 100%;
-            border: 2px solid black;
-            border : none;
-        }
-        #navbar {
-            height: 50px;
-            width: 100%;
-            border: 2px solid black;
-            display: flex;
-            justify-content: space-evenly;
-            background-color: black;
-            border:none;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: black;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: white; /* Change text color to white */
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            color: red;
-        }
-
-        .two {
-            color: white; /* Change text color to white */
-        }
-
-
-
-        #navbar .one {
-            height: 30px;
-            flex: 1;
-            border: 2px solid black;
-            margin-top: 3px;
-            display: flex;
-            align-items: center; 
-            border:none;
-        }
-
-        #navbar .one > .two {
-            color: white;
-            margin: auto;
-        }
-
-        #h, #r {
-            width: 20px; 
-        }
-
-        #h button, #r button {
-            width: 80%; 
-            
-            border: none; 
-            cursor: pointer; 
-        }
-
-        #r button {
-            background-color: green;
-            border:none;
-        }
-
-        #h button:hover {
-            background-color: whitesmoke;
-            border:none;
-        }
-
-        #r button:hover {
-            background-color: whitesmoke;
-            border:none;
-        }
-        .img {
-            width : 130px;
-            height : 30px;
-        }
-        #second {
-            border : 2px solid black ;
-            height : 960px;
-            width : 100%;
-            background-image: url("https://jonathanbjorkskog.com/wp-content/uploads/2021/02/semrush-bg.jpg");
-            background-size: cover;
-            border:none;
-        }
-        #second .a {
-            border : 2px solid black ;
-            height : 150px;
-            width : 900px;
-            margin-top : 40px;
-            display :flex;
-            text-align : center ;
-            margin-left : 170px;
-            border:none;
-
-        }
-        #second .a > .para1 {
-            font-family : Arial, Helvetica, sans-serif;
-            font-weight : bold;
-            font-size:46px;
-            margin : auto;
-            color : white;
-        }
-        #second .b{
-            border : 2px solid black ;
-            height : 90px;
-            width : 600px;
-            margin-left : 140px;
-            margin-left : 330px;
-            border:none;
-        }
-
-        #second .b > .para2 {
-            font-family : Arial, Helvetica, sans-serif;
-            font-weight : large;
-            font-size:20px;
-            margin-left : 90px;
-            color : white
-        } 
-        #second .c{
-            border : 2px solid black ;
-            height : 70px;
-            width : 900px;
-            margin-left : 170px;
-            border:none;
-        }
-        .c {
-            display: flex;
-            align-items: center;
-           
-        }
-        
-        .search-container,
-        .select-container {
-            margin-right: 10px; /* Adjust margin as needed */
-            margin-left : 110px;
-        }
-        
-        .search-container > input {
-            height : 50px;
-            width : 400px;
-        }
-
-        .select-container > select {
-            margin-right : 10px;
-        }
-        select {
-            width: 150px; /* Adjust width as needed */
-        }
-        #btn {
-            width : 150px;
-            height : 50px;
-            background-color: rgba(255, 68, 0, 0.826);
-            color : white;
-            border : none
-        }
-        
-        #second .d{
-            border : 2px solid black ;
-            height : 25px;
-            width : 400px;
-            margin-left : 230px;
-            margin-top : 90px;
-            margin-left : 440px;
-            border:none;
-        }
-        #para3{
-            margin-left : 80px;
-            margin-top : 20px;
-            color : rgb(179, 165, 165);
-            
-        }
-        #second .e{
-            border : 2px solid black ;
-            height : 50px;
-            width : 600px;
-            margin-left : 340px;
-            border:none;
-        }
-        #second .f{
-            border : 2px solid black ;
-            height : 70px;
-            width : 400px;
-            margin-left : 250px;
-            margin-top : 100px;
-            margin-left : 440px;
-            border:none;
-        }
-
-        .f > .para4{
-            font-family : Arial, Helvetica, sans-serif;
-            font-weight : large;
-            font-size:40px;
-            margin-left : 50px;
-            color : white;
-        }
-        #third {
-            border : 2px solid black ;
-            height : 500px;
-            width : 1000px;
-            margin-bottom : 100px;
-            margin-right : 30px;
-            padding-right : 10px;
-            margin-left : 140px;
-            border:none;
-        }
-        #fourth {
-            border : 2px solid black ;
-            height : 400px;
-            width : 900px;
-            margin-top : 350px;
-            margin-left : 15rem;
-            display : wrap;
-            align-items: center;
-            border:none;
-        }
-        #fourth .g {
-            border : 2px solid black ;
-            height : 96px;
-            width : 900px;
-            border:none;
-        }
-        .para5 {
-            font-family : Arial, Helvetica, sans-serif;
-            font-weight : large;
-            font-size : 40px;
-            margin-left : 50px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: bold;
-            color : black
-        }
-
-        #I {
-            padding-bottom : 80px;
-           
-        }
-
-        #img1 {
-            margin-left : 410px;
-            margin-top : 20px;
-            width : 80px;
-        }
-        
-        .fifth {
-            border: 2px solid black;
-            height: 200px;
-            width: 1200px;
-            margin-left : 40px;
-            margin-top : 40px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            border:none;
-        }
     
-        .fifth .h {
-            display: flex;
-        }
+    <link rel="stylesheet" href="./semrushnavbar.css">
+    <style>
         
-        .fifth .h > div {
-            border: 1px solid black;
-            height: 150px;
-            width: 300px;
-        }
-        
-        #six{
-            border: 1px solid black;
-            height: 170px;
-            width: 700px;
-            margin-left : 300px;
-            margin-top :70px;
-        }
-        
-        #seven {
-            border : 1px solid black ;
-            height : 500px;
-            width : 1248px;
-            margin-top : 20px;
-            display:flex;
-            flex-direction : row;
-            border:none;
-        }
-        #seven .ch1 , #seven .ch2 {
-            border : 1px solid black;
-            height : 500px;
-            width : 700px;
-            border:none;
+
+        .slideshow-container {
+            max-width: 100%;
+            overflow: hidden;
         }
 
-        #btn2 {
-            background-color:rgb(255, 119, 0);
-            margin-left:90px;
-            width:160px;
-            height:50px;
-            border:none;
-            font-size : 20px;
-            color : white;
-            
+        .slides-wrapper {
+            display: flex; 
+            transition: transform 0.5s ease; 
         }
 
-        .para7 {
-            margin-left:95px;
-            margin-top:170px;
-            font-weight : bold;
-            font-size : 30px;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-
-        #eight {
-            border : 1px solid black ;
-            height : 500px;
-            width : 1248px;
-            margin-top : 20px;
-            display : flex;
-            flex-direction: row;
-            border:none;
-        }
-        
-        #eigth .child1 , #eight .child2 {
-            border : 1px solid black;
-            height : 500px;
-            width : 700px;
-            border:none;
-        }
-        .child2 {
-            margin-left:90px;
-        }
-        #btn3 {
-            background-color:rgb(255, 119, 0);
-            width:300px;
-            height:50px;
-            border:none;
-            font-size : 20px;
-            color : white;
-            
-        }
-
-        #nine {
-            border : 1px solid black ;
-            height : 900px;
-            width : 1248px;
-            margin-top : 20px;
-            border:none;
-        }
-        #heart {
-            text-align : center ;
-            margin-top : 90px;
-            font-size : 45px;
-        }
-
-        #letme {
-            border:1px solid black;
-            height : 620px;
-            width :85%;
-            background-color :skyblue;
-           margin-left : 80px;
-            margin-top : 40px;
-            border:none;
-        }
-        #btngrp  button{
-           text-align: center;
-            height : 40px;
-            background-color:white ;
-            margin-top:30px;
-            border:none;
-        }
-        #casey {
-            font-family : Arial, Helvetica, sans-serif;
-                text-align:center;
-                font-weight : large;
-                font-size : 40px;
-                margin-left : 50px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: bold;
-                color : black"
-        }
-        #caseyimg {
-            
-
-        }
-        #caseyname {
-            text-align : center;
-            font-size : 16px;
-        }
-        #caseywork {
-            text-align : center;
-           
-            color : grey;
-            font-size : 19px;
-            
-        }
-        #ten {
-            border : 1px solid black ;
-            height : 300px;
-            width : 1248px;
-            margin-top : 170px;
-            display : wrap;
-            background-color:rgb(90, 26, 150);
-            border:none;
-        }
-
-        #ten .c1 , #ten .c2 , #ten .c3 {
-            border : 2px solid black;
-            height : 50px;
-            width : 100%;
-            margin-top : 30px;
-            color : white;
-            border:none;
-        }
-
-        #ten .c1 > #par1{
-            font-size:60px;margin-left:290px;
-            
-        }
-
-        #ten .c2 > #par2 {
-            font-size:30px;margin-left:330px;margin-top:20px;
-        }
-
-        #ten .c3 > #btn4 {
-            margin-left:450px;
-            width:300px;
-            height:50px;
-            background-color:rgb(255, 115, 0);
-            border:none;color:white;
-            font-size:20px;
-        } 
-
-        #footer {
-            border : 1px solid black ;
-            height : 100px;
-            width : 1248px;
-           
-            display : flex ;
-            flex-direction : row;
-
-        }
-        #footer .once , #footer .twice {
-            border : 1px solid black ;
-            height : 100px;
-            width : 800px;
-            background-color:black;
-        }
-        #last{
-           border: 1px solid black;
-           height : 300px;
-           width : 100%;
-
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .container {
-            display: flex;
+        .mySlides {
             width: 100%;
-        }
-        
-        .column {
-            flex: 1;
-            padding: 25px;
-            text-align: center;
-            background-color: black;
-            border: 1px solid #ddd;
-
-        }
-        
-        
-        
-        .column p{
-            color:grey;
-            font-size:12px;
-        }
-        .column h6 {
-            color:white;
-        }
-        #m_m{
-            background-color:black;
+            height: auto;
+            color: grey
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
    
     <div id="box">
-        <div id="navbar">
-            <div class="one"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKgvgpdaU4gsTTaLajupg9a82McoAPrZyMpw&usqp=CAU" alt="#"></div>
+        <div id="container">
+
+            <div id="top">
+                <ul id="up">
+                    <li><a href="index.html"><img src="https://www.semrush.com/lp/sem-aeoy/img/logo-white.svg" alt=""></a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="">Resources <i class="fa fa-caret-down"></i> </a>
+                        <div class="dropDown" style="width: 750px;">
+                            <div class="deb">
+                               <a href="blog1.html"> <h1>Blog</h1></a> 
+                               <p>Read the industry's latest thoughts on digital marketing,content strategy,SEO,PPC,<br>,media and more.</p>
+                               <h1>What's New</h1> 
+                               <p>Keep track pf the newest Semrush features and improvements</p>
+                               <a href="ebooks.html"><h1>Ebook</h1></a> 
+                               <p>A range of downloadable guides in PDF format that can help you broaden your knowledge and improve your skills.</p>
+                               <h1>Academy</h1> 
+                               <p>Get vital SEO skills,learn how to use our toolkits and get official certificates of your proficiency in SEO and Semrush</p>
+                               
+                            </div>
+                            <div class="deb">
+                                <h1>Help Center</h1> 
+                                <p>Learn how to use Semrush with user manuals,how-to's,videos and more!</p>
+                                <h1>Webinars</h1> 
+                                <p>Register and take part in educational webinars conducted by the best digital marketing experts. </p>
+                                <h1>Hire a Trusted Agency</h1> 
+                                <p>Pressed for time?Need rare skills?Get help from a trusted agency.Our experrts work with marketing projects of all kinds and budgets.</p>
+                                <h1>Top Websites</h1> 
+                                <p>Discover the most visited websites.Analyze their traffic and search rankings.Choose country or industry to find out who currently leads th market.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Company <i class="fa fa-caret-down"></i> </a>
+                        <div class="dropDown" style="width: 300px;">
+                            <div class="deb">
+                               <a href="#"> <h1> About Us </h1></a>
+                               <a href="#"> <h1>Newsroom</h1></a>
+                              <a href="">  <h1>Careers</h1></a>
+                               <a href="#"> <h1>Success Stories </h1></a>
+                               <a href="#"> <h1>Data Studies</h1></a>
+                               <a href=""> <h1>Affiliate Program</h1></a>
+                               <a href=""> <h1>For Investors</h1></a>
+                               <a href=""> <h1>Contacts</h1> </a>
+                               <a href="#"> <h1>Stats and Facts</h1></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">App Center <i class="fa fa-caret-down"></i> </a>
+                        <div class="dropDown" style="width: 650px;">
+                            <div class="deb" style=" width: 30%; ">
+                                <h1> Store</h1>
+                                <h1>My Apps</h1>
+                                <h1>About</h1>
+                                <h1>For Partners</h1>
+                                
+                            </div>
+                            <div class="deb-img" style=" width: 70%;">
+                                <h1> <img src="https://static.semrush.com/app-center/apps_images/adclarity-advertising-intelligence/adclarity-icon-new.png" alt=""> AdClarity - Advertising Intelligence </h1>
+                                <h1><img src="https://static.semrush.com/app-center/apps_images/buzzguru-influencer-analytics/buzzguru-influencer-analytics-icon.png" alt=""> BuzzGuru Influencer Analytics</h1>
+                                <h1><img src="https://static.semrush.com/app-center/apps_images/e-commerce-keywords-analytics/E-commerce_Keyword_Analytics_app_logo.png" alt=""> E-commerce Keywords Analytics</h1>
+                                <h1><img src="https://static.semrush.com/app-center/apps_images/mobile-app-insights/Mobile_App_Insights_app_logo.png" alt=""> Mobile App Insights </h1>
+                                <h1><img src="https://static.semrush.com/app-center/apps_images/video-rank-tracker/Video_Rank_Tracker_app_logo.png" alt=""> Video Rank Tracker</h1>
+                                <h1><img src="https://static.semrush.com/app-center/apps_images/media-monitoring/logo.png" alt=""> Media Monitering</h1>
+                                <h1 style="margin-left:10px;">See more apps ...</h1>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Extra Tools <i class="fa fa-caret-down"></i> </i></a>
+                        <div class="dropDown" style="width:400px;">
+                            <div class="deb">
+                                <h1> Content Marketplace</h1>
+                                <h1>Content Outline Builder</h1>
+                                <h1>ImpactHero</h1>
+                                <h1>Tools For Amazon </h1>
+                                <h1>Prowly</h1>
+                                <h1>SplitSignal</h1>
+                                <h1>For Investors</h1>
+                                <h1>Customs reports</h1>
+                                <h1>Surround Sound</h1>
+                                <h1>Pagelmprove</h1>
+                            </div>
+                        </div>
+                    </li>
+                    <div id="Signin">
+                        <p>EN<i class="fa fa-caret-down" style="margin-left: 5px;"></i></p>
+                        <button> <a href="./semrushlogin.html"> Log In </a></button>
+                        <button> <a href="./semrushsignup.html" style="color:aliceblue"> SignUp </a></button>
+                    </div>
+                </ul>
+                
+            </div>
             
-            <div class="one">
-                <span class="two">Features</span>
-            </div>
-    
-            <div class="one">
-                <span class="two">Pricing</span>
-            </div>
-    
-            <!-- Add other navbar items with dropdowns here -->
-            <div class="one">
-                <div class="dropdown">
-                    <span class="two">Resouces</span>
-                    <div class="dropdown-content">
-                        <a href="#">Blog</a>
-                        <a href="#">Help Center</a>
-                        <a href="#">What's New</a>
-                        <a href="#">Insights</a>
-                        <a href="#">Academy</a>
-                        <a href="#">GoodContent Hub</a>
-                        <a href="#">Webinars</a>
-                        <a href="#">Hire a trusted Agency</a>
-                        <a href="#">Top Websites</a>
-                        <a href="#">Local Marketing Hub </a>
-                    </div>
-                </div>
-            </div>
-            
-    
-            <div class="one">
-                <div class="dropdown">
-                    <span class="two">Company</span>
-                    <div class="dropdown-content">
-                        <a href="#">About Us</a>
-                        <a href="#">Newsroom</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Success Stories</a>
-                        <a href="#">Affiliate program</a>
-                        <a href="#">For Investors</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Success Stories</a>
-                    </div>
-                </div>
-            </div>
-    
-    
-            <div class="one">
-                <div class="dropdown">
-                    <span class="two">App Center</span>
-                    <div class="dropdown-content">
-                        <a href="#">Store</a>
-                        <a href="#">My Apps</a>
-                        <a href="#">About</a>
-                        <a href="#">For Parnters</a>
-                    </div>
-                </div>
-            </div>
-    
-    
-            <div class="one">
-                <div class="dropdown">
-                    <span class="two">Extra Tools</span>
-                    <div class="dropdown-content">
-                        <a href="#">Content Marketplace</a>
-                        <a href="#">Ecommerce Booster</a>
-                        <a href="#">Prowly</a>
-                        <a href="#">Kompyte</a>
-                        <a href="#">SplitSignals</a>
-                    </div>
-                </div>
-            </div>
-    
-            
-    
-            <div class="one">
-                <div class="dropdown">
-                    <span class="two">En</span>
-                    <div class="dropdown-content">
-                        <a href="#">English</a>
-                        <a href="#">Espanol</a>
-                        <a href="#">Deutsch</a>
-                        <a href="#">Francais</a>
-                        <a href="#">Italiano</a>
-                        <a href="#">Polski</a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="one" id="h">
-                <button><a href="./semrushlogin.html" class="btn1">Log In</a></button>
-            </div>
-    
-            <div class="one" id="r">
-                <button><a href="./semrushsignup.html" class="btn2">Sign Up</a></button>
-            </div>
         </div>
    
     
 
         <div id="second">
-            <div class="a"><span class="para1">Get measurable results <br>from online marketing</span></div>
-            <div class="b"><span class="para2">Do SEO, content marketing, competitor research,<br>&emsp;&emsp;&emsp;PPC and social media marketing from just one platform.</span></div>
+            <div class="a"><span class="para1" style="margin-top: 70px">Get measurable results <br>from online marketing</span></div>
+            <div class="b"><span class="para2" style="margin-top: 20px">Do SEO, content marketing, competitor research,<br>&emsp;&emsp;&emsp;PPC and social media marketing from just one platform.</span></div>
             
            
 
 <div class="c">
-    <div class="search-container">
+    <div class="search-container" >
         <input type="text" placeholder="Enter domain, Keyword or URL">
     </div>
     <div class="select-container">
@@ -636,10 +155,23 @@
 
 
             <div class="d"><span id="para3">Trusted by the world’s leading brands</span></div> 
-            <div class="e"></div>
+            <div class="e">
+                <div class="slideshow-container">
+                    <div class="slides-wrapper">
+                        <div class="mySlides">
+                            <img src="https://cdn.semrush.com/static/index/logos/Tesla_logo.f58ace4c9fc6.svg" alt="Slide 1">
+                            <img src="https://cdn.semrush.com/static/index/logos/Decathlon_logo.f70c6df7551d.svg" alt="Slide 2">
+                            <img src="https://cdn.semrush.com/static/index/logos/P&G_logo.519f594baedb.svg" alt="Slide 3">
+                            <img src="https://cdn.semrush.com/static/index/logos/Samsung_logo.239198909542.svg" alt="Slide 4">
+                            <img src="https://cdn.semrush.com/static/index/logos/LaLiga_logo.48646441c2cf.svg" alt="Slide 5">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="f"><span class="para4">See what's inside</span></div>
             
-            <div id="third" style="display: flex; align-items: center;">
+<div id="third" style="display: flex; align-items: center;">
 
                 <div style="flex: 1;">
                     <h1 style="margin-top: 40px;margin-left:30px;">Grow organic traffic with our <br>complete and easy SEO <br>tools & workflow</h1>
@@ -649,18 +181,18 @@
             
                 <img style="height: 300px; margin-left: 30px;" src="https://static.semrush.com/seo-dashboard/release/img/on-page-seo-checker.aab651.svg" alt="error">
             
-            </div>
+</div>
             
 
         </div>
 
         <div id="fourth">
             <div class="g" id="I"><p class="para5">"Semrush is like a keyword research tool,<br>&emsp;&emsp;Google Trends,Moz,Hootsuite and <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;SimilarWeb in one."</div>
-            <div class="g" id="II"><img id="img1" src="https://cdn.semrush.com/static/index/testimonials/Mario_Leon_Rojas.6062ad72d0c3.webp" alt="error"></div>
-            <!-- Existing HTML code above this line -->
+            <div class="g" id="II"><img style="margin-top:80px" id="img1" src="https://cdn.semrush.com/static/index/testimonials/Mario_Leon_Rojas.6062ad72d0c3.webp" alt="error"></div>
+            <!-- Next block-->
 
 <div class="g" id="III">
-    <div style="text-align: center;margin-top:10px;">
+    <div style="text-align: center;margin-top:80px;">
         <span><b>Mario León Rojas</b></span>
         <br>
         <span>Performance Marketing Specialist, Banco del Sol</span>
@@ -669,7 +201,7 @@
     </div>
 </div>
 
-<!-- Existing HTML code below this line -->
+<!-- Next block -->
 
             
         </div>
@@ -683,7 +215,7 @@
 
 <div class="h">
     <div>
-        <img style="width: 130px; margin-left: 30px; margin-top: 10px;" src="https://static.semrush.com/good-content-hub/prod/_next/static/media/image-1.ff5ba105.svg" alt="error">
+        <img style="width: 130px; margin-left: 30px; margin-top: 10px; border: none;" src="https://static.semrush.com/good-content-hub/prod/_next/static/media/image-1.ff5ba105.svg" alt="error">
         <h3 style="margin-bottom: 0;">marketing professionals</h3>
         <span>have already used Semrush</span>
     </div>
@@ -748,7 +280,7 @@
             <div>
                 <div id="letme">
             <div>
-                <p style="text-align : center"> <i class='bx bx-left-arrow-alt'></i>&emsp; &emsp;<b>1/4</b>&emsp;&emsp;<i class='bx bx-right-arrow-alt' ></i></p>
+                <p style="text-align : center"> <i class='bx bx-left-arrow-alt' style="margin-top:80px"></i>&emsp; &emsp;<b>1/4</b>&emsp;&emsp;<i class='bx bx-right-arrow-alt' ></i></p>
             </div>
             
                 <p id="casey">"I've been using Semrush for 7+ years now and <br> heavily rely on it to help me move whatever site I'm <br> working on to the top of Google." 
@@ -762,10 +294,10 @@
         
         <div id="ten">
             <div class="c1">
-                <span id="par1" >Get Started with Semrush today</span>
+                <span id="par1" style="margin-top: 50px; background-color:#009f81;">Get Started with Semrush today</span>
             </div>
             <div class="c2">
-                <span id="par2">Get 7 days of full access to all toolkits. Cancel anytime.
+                <span id="par2" style="margin-top: 50px">Get 7 days of full access to all toolkits. Cancel anytime.
             </div>
             <div class="c3">
                 <button id="btn4" style="margin-left:450px;width:300px;height:50px;background-color:rgb(255, 115, 0);border:none;color:white;font-size:20px;">Start your free trail</button>
@@ -774,38 +306,126 @@
         
         
         <div id="footer">
-            <div class="once">
-                <button style="margin-left:60px;margin-top:40px;width:160px;color:grey;height:30px;background-color:black">Contact Us</button><span style="color:grey;font-size:15px;margin-left:10px;">USA, 800 Boylston Street, Suite 2475, Boston, MA 02199</span>
-            </div>
-            <div class="twice">
-                <button style="margin-left:300px;margin-top:10px;width:260px;color:white;height:40px;background-color:rgb(9, 97, 9)">Get started with Semrush!</button>
-                <br><br><span style="color:grey;font-size:15px;margin-left:320px;">or see our plans or pricing</span>
-            </div>
-        </div>
+    <div class="once">
+        <button style="margin-left: 60px; margin-top: 40px; width: 160px; color: grey; height: 30px; background-color: black;">Contact Us</button><span style="color: grey; font-size: 15px; margin-left: 10px;">USA, 800 Boylston Street, Suite 2475, Boston, MA 02199</span>
+    </div>
+    <div class="twice">
+        <button style="margin-left: 300px; margin-top: 10px; width: 260px; color: white; height: 40px; background-color: rgb(9, 97, 9);">Get started with Semrush!</button>
+        <br><br><span style="color: grey; font-size: 15px; margin-left: 320px;">or see our plans or pricing</span>
+    </div>
+</div>
+
 
         
-        <div id="last">
-            <div class="container">
-                <div class="column">
-                    <h6 style="color:white">SEMRUSH</h6>
-                        <span style="color:grey;font-size:12px;">Feature<br>Pricing<br>&emsp;&emsp;&emsp;&emsp13;Success Stories<br>&emsp13;&emsp;&emsp;&emsp;Stats and Facts<br>Insigths<br>News
-                </div>
-                <div class="column">
-                    <h6>COMMUNITY</h6>
-                    <p>semrush blog<br>webinars</p>
-                </div>
-                <div class="column">
-                    <h6>MORE TOOLS</h6>
-                    <p>Analytics Reports <br> Projects <br> ContentMarketplace <br> Agency Partners
-                </div>
-                <div class="column"><h6>FOLLOW US</h6>
-                <p>Twitter<br>Facebook<br>Linkedln></div>
-            </div>
-            <div id="m_m">
-                <img style="width:200px;margin-left:20px;margin-top:30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs39XcR1mwoswRlrfRXj23UhhldVPhksilLJD4C-9R&s" alt="#"><span style="font-size:8px;color:grey">© 2008 - 2023 Semrush. All rights reserved.</span>
-            </div>
-
+<div id="last">
+    <div class="container">
+        <div class="col" style="display:flex; flex-direction:column">
+        <div class="column">
+            <h6 style="color:white">SEMRUSH</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Success Stories</li>
+                <li>Stats and Facts</li>
+                <li>Data Studies</li>
+                <li>News</li>
+                <li>Custom Report</li>
+            </ul>
         </div>
+        <div class="column">
+            <h6 style="color:white">HELP</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>Knowledge Base</li>
+                <li>Academy</li>
+                <li>Semrush API</li>
+            </ul>
+        </div>
+    </div>
+        <div class="column">
+            <h6 style="color:white">COMMUNITY</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>Semrush Blog</li>
+                <li>Webinars</li>
+                <li>Events</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h6 style="color:white">MORE TOOLS</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>Analytics Reports</li>
+                <li>Projects</li>
+                <li>Content Marketplace</li>
+                <li>Agency Partners</li>
+                <li>Affiliate Program</li>
+                <li>SEOquake</li>
+                <li>Sensor</li>
+                <li>Tools for Amazon</li>
+                <li>Prowly</li>
+                <li>App Center</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h6 style="color:white">COMPANY</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>About Us</li>
+                <li>Newsroom</li>
+                <li>Partners</li>
+                <li>Legal Info</li>
+                <li>Privacy Policy</li>
+                <li>Cookie Settings</li>
+                <li>Security Info</li>
+                <li>For Investors</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h6 style="color:white">FOLLOW US</h6>
+            <ul style="color: grey;
+            list-style-type: none; 
+            font-size:12px">
+                <li>Twitter</li>
+                <li>Facebook</li>
+                <li>LinkedIn</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+                <li>Pinterest</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h6 style="color: white">LANGUAGE</h6>
+            <ul style="color: grey;
+                list-style-type: none; 
+                font-size:12px">
+                <li>English</li>
+                <li>Español</li>
+                <li>Deutsch</li>
+                <li>Français</li>
+                <li>Italiano</li>
+                <li>Português (Brasil)</li>
+                <li>Tiếng Việt</li>
+                <li>Türkçe</li>
+                <li>中文</li>
+                <li>日本語</li>
+                <li>한국어</li>
+            </ul>
+        </div>
+    </div>
+    <div id="m_m">
+        <img style="width:200px;margin-left:20px;margin-top:30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs39XcR1mwoswRlrfRXj23UhhldVPhksilLJD4C-9R&s" alt="#">
+        <span style="font-size:8px;color:grey">© 2008 - 2023 Semrush. All rights reserved.</span>
+    </div>
+</div>
+
         
     </div>
 </body>

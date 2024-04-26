@@ -1,58 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="semrush.css">
+    <title>Login - Semrush</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+        }
+
+        .main-container h2 {
+            color: black;
+        }
+
+        .form-container {
+            color: #767676;
+            margin: auto;
+            width: 50%;
+            display: grid;
+            grid-template-rows: repeat(3);
+            gap: 10px;
+            padding-left: 60px;
+        }
+
+        .form-container h1 {
+            line-height: 0px;
+            margin: 20px;
+
+        }
+
+        .google-button {
+            padding: 3px;
+            width: 100%;
+            margin-left: 40px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inline-container {
+            display: flex;
+
+        }
+
+        .form-button {
+            margin: auto;
+            border: 1px solid #767676;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+
+        .separator {
+            padding: 0px;
+            position: relative;
+            text-align: center;
+            border-top: 1px solid #d1d4db;
+        }
+
+        .separator::before {
+            content: "or";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .input-label {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .input-field {
+            min-width: 0;
+            width: 100%;
+            height: 35px;
+            font-size: 20px;
+            padding: 0px;
+            border: 1px solid #767676;
+            border-radius: 5px;
+            background: transparent;
+            margin-bottom: 20px;
+        }
+
+        #submit-btn {
+            color: white;
+            min-width: 0;
+            width: 100%;
+            height: 38px;
+            font-size: 20px;
+            padding: 0px;
+            border: 1px solid #ff642d;
+            border-radius: 5px;
+            background: transparent;
+            margin-top: 5px;
+            background-color: #ff642d;
+            cursor: pointer;
+        }
+
+        .first-paragraph {
+            font-size: 18px;
+        }
+
+        .login-link {
+            color: #ff642d;
+            text-decoration: none;
+        }
+
+        .footer-container {
+            position: fixed;
+            height: 74px;
+            vertical-align: top;
+            width: 74px;
+            margin-top: -15%;
+            font-size: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 5px;
+        }
+
+        .recaptcha-logo {
+            transition: all 0.3s ease;
+            background-size: 40px;
+            height: 50px;
+            width: 50px;
+            background: url(https://www.gstatic.com/recaptcha/api2/logo_48.png);
+            background-repeat: no-repeat;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: #555;
+        }
+
+        #password {
+            margin-bottom: 0px;
+        }
+
+        #forget-pass-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #forget-pass-link {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            color: #ff642d;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="box1">
-        <div class="child1">
-            <!-- Content for child1 (Left Box) -->
-           
-            <a syle="margin-right:20px;"href="./semrush.html"><img class="change" src="https://www.semrush.com/static/images/semrush-logo-small.881644e56a14347680f7.svg" alt="error"></a>
 
-            <br> 
-            <h1>Log in</h1>
-            
-            <form class="login">
-                
-                <button class="google-login-btn">Log in with Google</button>
+    <div class="main-container">
+        <div>
+            <h1><a href="./semrush.html"><img src="https://i.ibb.co/XJ26L8z/logo-semrush.png" alt="logo-semrush"
+                        border="none"></a></h1>
+            <div action="" class="form-container">
+                <div>
+                    <h2>Create Your account</h1>
+                        <div class="google-button"><a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.semrush.com%3Fid%3Dauth959416&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=455507004705-2uef3t7ptqmq1n64nm6emj44ql3rpeft.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.semrush.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow"><img
+                                    src="https://i.ibb.co/4ZV16Nn/continue-with-googel-with-logo.png"
+                                    alt="continue-with-googel-with-logo" border="0"></a>
+                        </div>
+                        <div class="separator"></div>
+                </div>
 
-                <hr>
-                
-                <label for="username">Email</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password"><br><br>
+                <div class="flex-container">
+                    <form action="">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="text" id="email" class="input-field">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="password" id="password" class="input-field">
+                        <div id="forget-pass-container">
+                            <a id="forget-pass-link"
+                                href="https://www.semrush.com/login/restore/">Forget password</a>
+                        </div>
+                    </form>
+                    <button id="submit-btn" onclick="Login()" class="form-button">Login</button>
 
-                <a href="#" class="forgot-pass">Forgot your password?</a>
-
-                <button>Login</button><br>
-                
-                <p>Don't have a Semrush account? <a href="./semrushsignup.html" class="Sign-up"> Sign Up </a></p>
-                
-                <a href="#" class="link_saml">Login with SAML</a></span>
-            </form>
-        
-        </div>
-        
-        <div class="child2">
-            <!-- Content for child2 (Middle Box) -->
-          
-        </div>
-        
-        <div class="child3" style="background-color:skyblue">
-            <!-- Content for child3 (Right Box) -->
-            <div class="img1">
-                <img src="https://www.semrush.com/static/images/semrushman.7c00eae477bc819819b6.svg" alt="Semrush Logo">
+                </div>
+                <div>
+                    <p class="first-paragraph">Don't have a Semrush account? <a href="semrushsignup.html"
+                            class="login-link">Sign up Log in with SAML</a></p>
+                </div>
             </div>
         </div>
+        <div>
+            <img src="https://i.ibb.co/hVyk3j8/login-Sidebar.png" alt="login-Sidebar" border="none">
+        </div>
     </div>
-    
+
+    <div class="footer-container">
+        <a href="https://www.google.com/intl/en/policies/privacy/" class="footer-link">
+            <div class="recaptcha-logo" role="presentation">
+                <div class="rc-anchor-logo-img rc-anchor-logo-img-large"></div>
+            </div>
+            <div class="rc-anchor-pt">
+                <span>Privacy - </span><span><a href="https://www.google.com/intl/en/policies/terms/"
+                        target="_blank" class="footer-link">Terms</a></span>
+            </div>
+        </a>
+
+    </div>
 </body>
+
 </html>
-
-<script src = "./semrushlogin.js"></script>
-
+<script src="./semrushlogin.js"></script>
