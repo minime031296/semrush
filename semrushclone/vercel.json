@@ -17,15 +17,11 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/semrushclone/enterpage.html"
+      "dest": "/semrushclone/semrush.html"
     },
     {
       "src": "/enterpage",
       "dest": "/semrushclone/enterpage.html"
-    },
-    {
-      "src": "/semrush",
-      "dest": "/semrushclone/semrush.html"
     },
     {
       "src": "/semrushlogin",
