@@ -1,8 +1,51 @@
 {
-  "rewrites":
-  [{
-    "source":"/(.*)",
-    "destination":"/"
-  }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "semrushclone/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "semrushclone/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "semrushclone/*.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/semrushclone/enterpage.html"
+    },
+    {
+      "src": "/enterpage",
+      "dest": "/semrushclone/enterpage.html"
+    },
+    {
+      "src": "/semrush",
+      "dest": "/semrushclone/semrush.html"
+    },
+    {
+      "src": "/semrushlogin",
+      "dest": "/semrushclone/semrushlogin.html"
+    },
+    {
+      "src": "/semrushsignup",
+      "dest": "/semrushclone/semrushsignup.html"
+    },
+    {
+      "src": "/semrushslider",
+      "dest": "/semrushclone/semrushSlider.html"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/semrushclone/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/semrushclone/$1"
+    }
+  ]
 }
-  
