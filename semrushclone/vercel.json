@@ -10,7 +10,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "semrush/$1"
+        "dest": "/"
       }
     ]
   }
