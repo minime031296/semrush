@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "name": "semrush-project",
+    "builds": [
+      {
+        "src": "semrush/semrush.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "semrush/$1"
+      }
+    ]
+  }
+  
