@@ -1,4 +1,4 @@
-let form = document.querySelector(".login");
+var form = document.querySelector(".login");
 let email = document.getElementById("username");
 let password = document.getElementById("password");
 
