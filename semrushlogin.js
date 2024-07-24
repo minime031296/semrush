@@ -21,6 +21,7 @@ form.addEventListener("submit", function (event) {
     if (userDetails.email === savedDetails.email && userDetails.password === savedDetails.password) {
        
         window.location.replace("./enterpage.html");
+        
     } else {
         alert("Wrong login or password.");
     }
